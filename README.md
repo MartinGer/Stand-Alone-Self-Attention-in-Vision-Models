@@ -14,9 +14,18 @@ To migitate this issue the authors introduce a local attention mechanism, that a
 ![SASA](https://user-images.githubusercontent.com/19909320/119891131-f128f880-bf38-11eb-95e7-8c66a705f8e1.png)
 
 
-## Example
-```python 
+## Implementation details
+I only tested the implementation with ResNet50 for now. The used ResNet V1.5 architectures are adapted from https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py
 
-```
+#### Additional Parameters:
+- attention: ResNet stages in which you would like to apply the attention layers
+- num_heads: Number of attention heads
+- kernel_size: Size of the receptive field of the local attention algorithm
+- inference: Allows to inspect the attention weights of a trained model
+
+## Example
+See the jupyter notebook or the example training script
+
 ## Requirements
 - pytorch
+- I use [fast.ai](https://www.fast.ai/) and the [imagenette](https://github.com/fastai/imagenette) dataset for the examples
