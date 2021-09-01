@@ -60,8 +60,9 @@ class SASA_Layer(nn.Module):
         qk += qr_h
         qk += qr_w
         
-        weights = F.softmax(qk, dim=-1)
-        weights = weights.reshape(batch_size, self.num_heads, height, width, 1, self.kernel_size*self.kernel_size)
+        qk = qk.reshape(batch_size, self.num_heads, height, width, 1, self.kernel_size*self.kernel_size)
+        weights = F.softmax(qk, dim=-1)    
+        
         if self.inference:
             self.weights = nn.Parameter(weights)
         
