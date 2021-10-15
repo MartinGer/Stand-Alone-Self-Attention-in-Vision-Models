@@ -13,6 +13,7 @@ To migitate this issue the authors introduce a local attention mechanism, that a
 
 ![SASA](https://user-images.githubusercontent.com/19909320/119891131-f128f880-bf38-11eb-95e7-8c66a705f8e1.png)
 
+![SASA](https://user-images.githubusercontent.com/19909320/137499552-3bdf3189-7f57-4f95-a85e-8d5dd2ef6fd0.png)
 
 ## Implementation details
 I only tested the implementation with ResNet50 for now. The used ResNet V1.5 architectures are adapted from https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py
